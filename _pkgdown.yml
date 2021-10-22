@@ -1,0 +1,56 @@
+template:
+  params:
+    ganalytics: UA-181075487-1
+
+navbar:
+   title: "rpsftmPlus"
+   left:
+    - icon: fa-home
+      href: index.html
+    - text: "Vignette"
+      href: articles/rpsftmPlus.html
+    - text: "Functions"
+      href: reference/index.html
+    - text: "Other Packages"
+      menu:
+        - text: "Global-HTA-Evidence-Open"
+          href: https://roche.github.io/Global-HTA-Evidence-Open/index.html
+        - text: "flexsurvPlus"
+          href: https://roche.github.io/flexsurvPlus/index.html          
+        - text: "gemtcPlus"
+          href: https://roche.github.io/gemtcPlus/index.html
+        - text: "MAIC"
+          href: https://roche.github.io/MAIC/index.html          
+        - text: "rpsftmPlus"
+          href: https://roche.github.io/rpsftmPlus/index.html
+        - text: "descem"
+          href: https://roche.github.io/descem/index.html
+   right:
+    - icon: fa-github
+      href: https://github.com/Roche/rpsftmPlus
+
+       
+
+reference:
+- title: "Assessing switching patterns"
+  desc: "Functions for assessing impact of switching before adjustment"
+- contents: 
+  - ggexposure
+  - ggatrisk
+  - rpsftm.atrisk
+  - ggdiscount
+- title: "Diagnostics"
+  desc: "Functions for diagnositics of grid estimation."
+- contents:
+  - ggpsi
+  - gglatent
+- title: "Analysis and Reporting of RPSFT models"
+  desc: "Functions for analysing and reporting RPSFT models."
+- contents:
+  - rpsftm.refit
+  - rpsftm.coxph
+  - ggcfact
+- title: "Helper functions"
+  desc: "Helper functions."
+- contents:
+  - as.data.frame.survfit
