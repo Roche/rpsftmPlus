@@ -16,9 +16,17 @@
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-SGZFXJEC6X"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'G-SGZFXJEC6X');
+</script>
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,7 +39,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rpsftmPlus</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.0</span>
       </span>
     </div>
 
@@ -57,29 +65,29 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="https://roche.github.io/Global-HTA-Evidence-Open/index.html">Global-HTA-Evidence-Open</a>
+      <a href="https://roche.github.io/Global-HTA-Evidence-Open/index.html" class="external-link">Global-HTA-Evidence-Open</a>
     </li>
     <li>
-      <a href="https://roche.github.io/flexsurvPlus/index.html">flexsurvPlus</a>
+      <a href="https://roche.github.io/flexsurvPlus/index.html" class="external-link">flexsurvPlus</a>
     </li>
     <li>
-      <a href="https://roche.github.io/gemtcPlus/index.html">gemtcPlus</a>
+      <a href="https://roche.github.io/gemtcPlus/index.html" class="external-link">gemtcPlus</a>
     </li>
     <li>
-      <a href="https://roche.github.io/MAIC/index.html">MAIC</a>
+      <a href="https://roche.github.io/MAIC/index.html" class="external-link">MAIC</a>
     </li>
     <li>
-      <a href="https://roche.github.io/rpsftmPlus/index.html">rpsftmPlus</a>
+      <a href="https://roche.github.io/rpsftmPlus/index.html" class="external-link">rpsftmPlus</a>
     </li>
     <li>
-      <a href="https://roche.github.io/descem/index.html">descem</a>
+      <a href="https://roche.github.io/descem/index.html" class="external-link">descem</a>
     </li>
   </ul>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/Roche/rpsftmPlus">
+  <a href="https://github.com/Roche/rpsftmPlus" class="external-link">
     <span class="fa fa-github"></span>
      
   </a>
@@ -94,7 +102,7 @@
 
       
 
-      </header><script src="rpsftmPlus_files/header-attrs-2.14/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>rpsftmPlus-vignette</h1>
@@ -116,44 +124,44 @@
 <li>
 <em>gg…</em>: Various plotting functions for decriptive analysis, diagnostics and reporting.</li>
 </ul>
-<div id="package-installation" class="section level1">
-<h1 class="hasAnchor">
-<a href="#package-installation" class="anchor"></a>Package installation</h1>
+<div class="section level2">
+<h2 id="package-installation">Package installation<a class="anchor" aria-label="anchor" href="#package-installation"></a>
+</h2>
 <p>The package can be installed using the following commands in the R console.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="co"># install package from github</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html">install_github</a></span><span class="op">(</span>
-  <span class="st">'Roche/Global-HTA-Evidence-Open'</span>, subdir <span class="op">=</span> <span class="st">"Rpackages/rpsftmPlus"</span>
-<span class="op">)</span></pre></div>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">rpsftmPlus</span><span class="op">)</span>
-<span class="co">#&gt; Loading required package: rpsftm</span>
-<span class="co">#&gt; Warning: replacing previous import 'rpsftm::cox.zph' by 'survival::cox.zph' when</span>
-<span class="co">#&gt; loading 'rpsftmPlus'</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">rpsftm</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/therneau/survival">survival</a></span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'survival'</span>
-<span class="co">#&gt; The following object is masked from 'package:rpsftm':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     cox.zph</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'dplyr'</span>
-<span class="co">#&gt; The following objects are masked from 'package:stats':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     filter, lag</span>
-<span class="co">#&gt; The following objects are masked from 'package:base':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     intersect, setdiff, setequal, union</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/hadley/reshape">reshape2</a></span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install package from github</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span></span>
+<span>  <span class="st">'Roche/Global-HTA-Evidence-Open'</span>, subdir <span class="op">=</span> <span class="st">"Rpackages/rpsftmPlus"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">rpsftmPlus</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Loading required package: rpsftm</span></span>
+<span><span class="co">#&gt; Warning: replacing previous import 'rpsftm::cox.zph' by 'survival::cox.zph' when</span></span>
+<span><span class="co">#&gt; loading 'rpsftmPlus'</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">rpsftm</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/therneau/survival" class="external-link">survival</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'survival'</span></span>
+<span><span class="co">#&gt; The following object is masked from 'package:rpsftm':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     cox.zph</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     filter, lag</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/hadley/reshape" class="external-link">reshape2</a></span><span class="op">)</span></span></code></pre></div>
 <p>We first need to derive time on experimental treatment and add to the data frame.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="va">immdef</span> <span class="op">&lt;-</span> <span class="fu">rpsftm</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/rpsftm/man/immdef.html">immdef</a></span>
-<span class="va">immdef</span><span class="op">$</span><span class="va">rx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/with.html">with</a></span><span class="op">(</span><span class="va">immdef</span>, <span class="fl">1</span> <span class="op">-</span> <span class="va">xoyrs</span><span class="op">/</span><span class="va">progyrs</span><span class="op">)</span>
-<span class="fu">pander</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pander/man/pander.html">pander</a></span><span class="op">(</span><span class="va">immdef</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,<span class="op">]</span><span class="op">)</span></pre></div>
-<table class="table">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">immdef</span> <span class="op">&lt;-</span> <span class="fu">rpsftm</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/rpsftm/man/immdef.html" class="external-link">immdef</a></span></span>
+<span><span class="va">immdef</span><span class="op">$</span><span class="va">rx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">immdef</span>, <span class="fl">1</span> <span class="op">-</span> <span class="va">xoyrs</span><span class="op">/</span><span class="va">progyrs</span><span class="op">)</span></span>
+<span><span class="fu">pander</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pander/man/pander.html" class="external-link">pander</a></span><span class="op">(</span><span class="va">immdef</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,<span class="op">]</span><span class="op">)</span></span></code></pre></div>
+<table style="width:100%;" class="table">
 <colgroup>
 <col width="6%">
 <col width="8%">
@@ -242,41 +250,41 @@
 </tbody>
 </table>
 <p>Now we can fit an rpsftm model as in the repsftm documentation</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="va">imm.fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/rpsftm/man/rpsftm.html">rpsftm</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/survival/man/Surv.html">Surv</a></span><span class="op">(</span><span class="va">progyrs</span>, <span class="va">prog</span><span class="op">)</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/pkg/rpsftm/man/rand.html">rand</a></span><span class="op">(</span><span class="va">imm</span>, <span class="va">rx</span><span class="op">)</span>,
-                  data<span class="op">=</span><span class="va">immdef</span>,
-                  censor_time<span class="op">=</span><span class="va">censyrs</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">imm.fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/rpsftm/man/rpsftm.html" class="external-link">rpsftm</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/survival/man/Surv.html" class="external-link">Surv</a></span><span class="op">(</span><span class="va">progyrs</span>, <span class="va">prog</span><span class="op">)</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/pkg/rpsftm/man/rand.html" class="external-link">rand</a></span><span class="op">(</span><span class="va">imm</span>, <span class="va">rx</span><span class="op">)</span>,</span>
+<span>                  data<span class="op">=</span><span class="va">immdef</span>,</span>
+<span>                  censor_time<span class="op">=</span><span class="va">censyrs</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="descriptive-analyses" class="section level1">
-<h1 class="hasAnchor">
-<a href="#descriptive-analyses" class="anchor"></a>Descriptive analyses</h1>
+<div class="section level2">
+<h2 id="descriptive-analyses">Descriptive analyses<a class="anchor" aria-label="anchor" href="#descriptive-analyses"></a>
+</h2>
 <p>These analysis are not related to the rpsftm analysis. They just use the rpsftm object as a useful way to capture information on survival and switching in a single object.</p>
-<div id="exposure-plot-patient-profile" class="section level2">
-<h2 class="hasAnchor">
-<a href="#exposure-plot-patient-profile" class="anchor"></a>Exposure Plot (patient profile)</h2>
+<div class="section level3">
+<h3 id="exposure-plot-patient-profile">Exposure Plot (patient profile)<a class="anchor" aria-label="anchor" href="#exposure-plot-patient-profile"></a>
+</h3>
 <p>The first plot to review shows the exposure to experimental treatment in control arm prior to event or censoring. This assumes only a single switch per patient (either control -&gt; experimental or experimental -&gt; control respectively. Each line represents a single patîent.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="../reference/ggexposure.html">ggexposure</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span>
-<span class="co">#&gt; Warning: `transmute_()` was deprecated in dplyr 0.7.0.</span>
-<span class="co">#&gt; Please use `transmute()` instead.</span>
-<span class="co">#&gt; See vignette('programming') for more help</span>
-<span class="co">#&gt; This warning is displayed once every 8 hours.</span>
-<span class="co">#&gt; Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</span></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/ggexposure.html">ggexposure</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: `transmute_()` was deprecated in dplyr 0.7.0.</span></span>
+<span><span class="co">#&gt; Please use `transmute()` instead.</span></span>
+<span><span class="co">#&gt; See vignette('programming') for more help</span></span>
+<span><span class="co">#&gt; <span style="color: #555555;">This warning is displayed once every 8 hours.</span></span></span>
+<span><span class="co">#&gt; <span style="color: #555555;">Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</span></span></span></code></pre></div>
 <p><img src="rpsftmPlus_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
 </div>
-<div id="at-risk-plot-and-table" class="section level2">
-<h2 class="hasAnchor">
-<a href="#at-risk-plot-and-table" class="anchor"></a>At risk plot and table</h2>
+<div class="section level3">
+<h3 id="at-risk-plot-and-table">At risk plot and table<a class="anchor" aria-label="anchor" href="#at-risk-plot-and-table"></a>
+</h3>
 <p>The second plot to consider shows the patient status over time. These are mutually exclusive states. I.e. the total percent of patients at risk is the sum of patients at risk on control and experimental.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="../reference/ggatrisk.html">ggatrisk</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/ggatrisk.html">ggatrisk</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span></span></code></pre></div>
 <p><img src="rpsftmPlus_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
 <p>The plot data can be retrieved using the <strong>rpsftm.atrisk()</strong> function for tabulation.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="fu"><a href="../reference/rpsftm.atrisk.html">rpsftm.atrisk</a></span><span class="op">(</span><span class="va">imm.fit</span>, eval.times <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/cast.html">dcast</a></span><span class="op">(</span><span class="va">Arm</span> <span class="op">+</span> <span class="va">Status</span> <span class="op">~</span> <span class="va">Time</span>, value.var <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">pander</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pander/man/pander.html">pander</a></span><span class="op">(</span><span class="op">)</span></pre></div>
-<table class="table">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/rpsftm.atrisk.html">rpsftm.atrisk</a></span><span class="op">(</span><span class="va">imm.fit</span>, eval.times <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/cast.html" class="external-link">dcast</a></span><span class="op">(</span><span class="va">Arm</span> <span class="op">+</span> <span class="va">Status</span> <span class="op">~</span> <span class="va">Time</span>, value.var <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu">pander</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pander/man/pander.html" class="external-link">pander</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<table style="width:100%;" class="table">
 <colgroup>
 <col width="36%">
 <col width="32%">
@@ -361,123 +369,123 @@
 </tbody>
 </table>
 </div>
-<div id="discount-plot" class="section level2">
-<h2 class="hasAnchor">
-<a href="#discount-plot" class="anchor"></a>Discount Plot</h2>
+<div class="section level3">
+<h3 id="discount-plot">Discount Plot<a class="anchor" aria-label="anchor" href="#discount-plot"></a>
+</h3>
 <p>This plot allows an assessment of the impact of switching. It shows hypothetical results for different levels of discount. A flat line indicates no impact of switching on results while a sloping line indicates that the switch does affect the results.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="fu"><a href="../reference/ggdiscount.html">ggdiscount</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span>
-<span class="co">#&gt; Warning: `data_frame()` was deprecated in tibble 1.1.0.</span>
-<span class="co">#&gt; Please use `tibble()` instead.</span>
-<span class="co">#&gt; This warning is displayed once every 8 hours.</span>
-<span class="co">#&gt; Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</span></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/ggdiscount.html">ggdiscount</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: `data_frame()` was deprecated in tibble 1.1.0.</span></span>
+<span><span class="co">#&gt; Please use `tibble()` instead.</span></span>
+<span><span class="co">#&gt; <span style="color: #555555;">This warning is displayed once every 8 hours.</span></span></span>
+<span><span class="co">#&gt; <span style="color: #555555;">Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</span></span></span></code></pre></div>
 <p><img src="rpsftmPlus_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
 </div>
 </div>
-<div id="diagnostic-plots" class="section level1">
-<h1 class="hasAnchor">
-<a href="#diagnostic-plots" class="anchor"></a>Diagnostic plots</h1>
+<div class="section level2">
+<h2 id="diagnostic-plots">Diagnostic plots<a class="anchor" aria-label="anchor" href="#diagnostic-plots"></a>
+</h2>
 <p>The following plots are useful to assess if an rpsftm model has converged.</p>
-<div id="psi-plot" class="section level2">
-<h2 class="hasAnchor">
-<a href="#psi-plot" class="anchor"></a>Psi plot</h2>
+<div class="section level3">
+<h3 id="psi-plot">Psi plot<a class="anchor" aria-label="anchor" href="#psi-plot"></a>
+</h3>
 <p>This shows the evaluated values of psi in the g-estimation. For convergence should be a single root. In this case it appears fine.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit">
-<span class="fu"><a href="../reference/ggpsi.html">ggpsi</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/ggpsi.html">ggpsi</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span></span></code></pre></div>
 <p><img src="rpsftmPlus_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
 </div>
-<div id="latent-survival-plot" class="section level2">
-<h2 class="hasAnchor">
-<a href="#latent-survival-plot" class="anchor"></a>Latent survival plot</h2>
+<div class="section level3">
+<h3 id="latent-survival-plot">Latent survival plot<a class="anchor" aria-label="anchor" href="#latent-survival-plot"></a>
+</h3>
 <p>This shows the latent survival times for both arms. For convergence should be a overlapping per randomization. In this case it appears fine.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit">
-<span class="fu"><a href="../reference/gglatent.html">gglatent</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/gglatent.html">gglatent</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span></span></code></pre></div>
 <p><img src="rpsftmPlus_files/figure-html/unnamed-chunk-10-1.png" width="700"></p>
 </div>
 </div>
-<div id="result-reporting" class="section level1">
-<h1 class="hasAnchor">
-<a href="#result-reporting" class="anchor"></a>Result reporting</h1>
+<div class="section level2">
+<h2 id="result-reporting">Result reporting<a class="anchor" aria-label="anchor" href="#result-reporting"></a>
+</h2>
 <p>Assumming all diagnostics are fine and switching does impact the results can now look at the rpsftm results.</p>
-<div id="survival-plot" class="section level2">
-<h2 class="hasAnchor">
-<a href="#survival-plot" class="anchor"></a>Survival plot</h2>
+<div class="section level3">
+<h3 id="survival-plot">Survival plot<a class="anchor" aria-label="anchor" href="#survival-plot"></a>
+</h3>
 <p>This shows the observed survival for both arms alongside the latent survial time for the control arm (as detected by rpsftm).</p>
-<div class="sourceCode" id="cb11"><pre class="downlit">
-<span class="fu"><a href="../reference/ggcfact.html">ggcfact</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/ggcfact.html">ggcfact</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span></span></code></pre></div>
 <p><img src="rpsftmPlus_files/figure-html/unnamed-chunk-11-1.png" width="700"></p>
 </div>
-<div id="cox-model" class="section level2">
-<h2 class="hasAnchor">
-<a href="#cox-model" class="anchor"></a>Cox model</h2>
+<div class="section level3">
+<h3 id="cox-model">Cox model<a class="anchor" aria-label="anchor" href="#cox-model"></a>
+</h3>
 <p>This function fits a cox model comparing the observed experimental time to latent control time. Importantly it corrects the variance of the coefficient to account for the g-estimation procedure i.e. it inflates the variance based on the itt p-value.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit">
-<span class="fu"><a href="../reference/rpsftm.coxph.html">rpsftm.coxph</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; Call:</span>
-<span class="co">#&gt; coxph(formula = rpsftm.formula(x), data = cfact.df)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   n= 1000, number of events= 285 </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;         coef exp(coef) se(coef)      z Pr(&gt;|z|)  </span>
-<span class="co">#&gt; .arm -0.2633    0.7685   0.1376 -1.914   0.0556 .</span>
-<span class="co">#&gt; ---</span>
-<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;      exp(coef) exp(-coef) lower .95 upper .95</span>
-<span class="co">#&gt; .arm    0.7685      1.301    0.5869     1.006</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Concordance= 0.529  (se = 0.016 )</span>
-<span class="co">#&gt; Likelihood ratio test= 4.72  on 1 df,   p=0.03</span>
-<span class="co">#&gt; Wald test            = 4.72  on 1 df,   p=0.03</span>
-<span class="co">#&gt; Score (logrank) test = 4.74  on 1 df,   p=0.03</span></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/rpsftm.coxph.html">rpsftm.coxph</a></span><span class="op">(</span><span class="va">imm.fit</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Call:</span></span>
+<span><span class="co">#&gt; coxph(formula = rpsftm.formula(x), data = cfact.df)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   n= 1000, number of events= 285 </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;         coef exp(coef) se(coef)      z Pr(&gt;|z|)  </span></span>
+<span><span class="co">#&gt; .arm -0.2633    0.7685   0.1376 -1.914   0.0556 .</span></span>
+<span><span class="co">#&gt; ---</span></span>
+<span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;      exp(coef) exp(-coef) lower .95 upper .95</span></span>
+<span><span class="co">#&gt; .arm    0.7685      1.301    0.5869     1.006</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Concordance= 0.529  (se = 0.016 )</span></span>
+<span><span class="co">#&gt; Likelihood ratio test= 4.72  on 1 df,   p=0.03</span></span>
+<span><span class="co">#&gt; Wald test            = 4.72  on 1 df,   p=0.03</span></span>
+<span><span class="co">#&gt; Score (logrank) test = 4.74  on 1 df,   p=0.03</span></span></code></pre></div>
 </div>
-<div id="sensitivity-of-common-treatment-effect" class="section level2">
-<h2 class="hasAnchor">
-<a href="#sensitivity-of-common-treatment-effect" class="anchor"></a>Sensitivity of common treatment effect</h2>
+<div class="section level3">
+<h3 id="sensitivity-of-common-treatment-effect">Sensitivity of common treatment effect<a class="anchor" aria-label="anchor" href="#sensitivity-of-common-treatment-effect"></a>
+</h3>
 <p>This function refits an rpsft model with modified treatment effect in the control arm. This allows assessment of the sensitivity to the common treatment effect assumption.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit">
-<span class="co"># 50% efficacy for switchers</span>
-<span class="va">imm.fit.s1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rpsftm.refit.html">rpsftm.refit</a></span><span class="op">(</span><span class="va">imm.fit</span>, k <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> 
-<span class="va">imm.fit.s1</span> <span class="op">%&gt;%</span> <span class="fu"><a href="../reference/rpsftm.coxph.html">rpsftm.coxph</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; Call:</span>
-<span class="co">#&gt; coxph(formula = rpsftm.formula(x), data = cfact.df)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   n= 1000, number of events= 300 </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;         coef exp(coef) se(coef)      z Pr(&gt;|z|)  </span>
-<span class="co">#&gt; .arm -0.2453    0.7825   0.1282 -1.914   0.0556 .</span>
-<span class="co">#&gt; ---</span>
-<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;      exp(coef) exp(-coef) lower .95 upper .95</span>
-<span class="co">#&gt; .arm    0.7825      1.278    0.6086     1.006</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Concordance= 0.528  (se = 0.015 )</span>
-<span class="co">#&gt; Likelihood ratio test= 4.44  on 1 df,   p=0.04</span>
-<span class="co">#&gt; Wald test            = 4.43  on 1 df,   p=0.04</span>
-<span class="co">#&gt; Score (logrank) test = 4.45  on 1 df,   p=0.03</span></pre></div>
-<div class="sourceCode" id="cb14"><pre class="downlit">
-<span class="co"># 80% efficacy for switchers</span>
-<span class="va">imm.fit.s2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rpsftm.refit.html">rpsftm.refit</a></span><span class="op">(</span><span class="va">imm.fit</span>, k <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> 
-<span class="va">imm.fit.s2</span> <span class="op">%&gt;%</span> <span class="fu"><a href="../reference/rpsftm.coxph.html">rpsftm.coxph</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt; Call:</span>
-<span class="co">#&gt; coxph(formula = rpsftm.formula(x), data = cfact.df)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   n= 1000, number of events= 292 </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;         coef exp(coef) se(coef)      z Pr(&gt;|z|)  </span>
-<span class="co">#&gt; .arm -0.2688    0.7643   0.1404 -1.914   0.0556 .</span>
-<span class="co">#&gt; ---</span>
-<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;      exp(coef) exp(-coef) lower .95 upper .95</span>
-<span class="co">#&gt; .arm    0.7643      1.308    0.5804     1.006</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Concordance= 0.53  (se = 0.015 )</span>
-<span class="co">#&gt; Likelihood ratio test= 5.1  on 1 df,   p=0.02</span>
-<span class="co">#&gt; Wald test            = 5.1  on 1 df,   p=0.02</span>
-<span class="co">#&gt; Score (logrank) test = 5.13  on 1 df,   p=0.02</span></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 50% efficacy for switchers</span></span>
+<span><span class="va">imm.fit.s1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rpsftm.refit.html">rpsftm.refit</a></span><span class="op">(</span><span class="va">imm.fit</span>, k <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> </span>
+<span><span class="va">imm.fit.s1</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="../reference/rpsftm.coxph.html">rpsftm.coxph</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Call:</span></span>
+<span><span class="co">#&gt; coxph(formula = rpsftm.formula(x), data = cfact.df)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   n= 1000, number of events= 300 </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;         coef exp(coef) se(coef)      z Pr(&gt;|z|)  </span></span>
+<span><span class="co">#&gt; .arm -0.2453    0.7825   0.1282 -1.914   0.0556 .</span></span>
+<span><span class="co">#&gt; ---</span></span>
+<span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;      exp(coef) exp(-coef) lower .95 upper .95</span></span>
+<span><span class="co">#&gt; .arm    0.7825      1.278    0.6086     1.006</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Concordance= 0.528  (se = 0.015 )</span></span>
+<span><span class="co">#&gt; Likelihood ratio test= 4.44  on 1 df,   p=0.04</span></span>
+<span><span class="co">#&gt; Wald test            = 4.43  on 1 df,   p=0.04</span></span>
+<span><span class="co">#&gt; Score (logrank) test = 4.45  on 1 df,   p=0.03</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 80% efficacy for switchers</span></span>
+<span><span class="va">imm.fit.s2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rpsftm.refit.html">rpsftm.refit</a></span><span class="op">(</span><span class="va">imm.fit</span>, k <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> </span>
+<span><span class="va">imm.fit.s2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="../reference/rpsftm.coxph.html">rpsftm.coxph</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Call:</span></span>
+<span><span class="co">#&gt; coxph(formula = rpsftm.formula(x), data = cfact.df)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   n= 1000, number of events= 292 </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;         coef exp(coef) se(coef)      z Pr(&gt;|z|)  </span></span>
+<span><span class="co">#&gt; .arm -0.2688    0.7643   0.1404 -1.914   0.0556 .</span></span>
+<span><span class="co">#&gt; ---</span></span>
+<span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;      exp(coef) exp(-coef) lower .95 upper .95</span></span>
+<span><span class="co">#&gt; .arm    0.7643      1.308    0.5804     1.006</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Concordance= 0.53  (se = 0.015 )</span></span>
+<span><span class="co">#&gt; Likelihood ratio test= 5.1  on 1 df,   p=0.02</span></span>
+<span><span class="co">#&gt; Wald test            = 5.1  on 1 df,   p=0.02</span></span>
+<span><span class="co">#&gt; Score (logrank) test = 5.13  on 1 df,   p=0.02</span></span></code></pre></div>
 </div>
 </div>
   </div>
@@ -493,11 +501,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Iain Bennett.</p>
+  <p></p>
+<p>Developed by Iain Bennett.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
@@ -505,6 +515,8 @@
 
   
 
+
+  
 
   </body>
 </html>

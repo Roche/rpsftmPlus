@@ -41,6 +41,9 @@ navbar:
        
 
 reference:
+- title: "Package information"
+  contents:
+  - rpsftmPlus
 - title: "Assessing switching patterns"
   desc: "Functions for assessing impact of switching before adjustment"
 - contents: 
