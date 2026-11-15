@@ -52,6 +52,7 @@ rpsftm.coxph <- function(x){
     sd.itt  <- survdiff(rpsftm.formula(x), data = rpsftm.data(x))
     z0 <- sd.itt$chisq ^ 0.5
     cfact.cox$var <- matrix((abs(coef(cfact.cox)) / z0)^2)
+    cfact.cox$wald.test <- as.numeric(coef(cfact.cox)^2 / cfact.cox$var)
 
   } else {
     stop("Sorry so far only survdiff as test function supported.")
