@@ -114,6 +114,9 @@ rpsftm.data <- function(x){
     unlist() %>%
     as.numeric()
 
+  # Use the same 0/1 event coding as the fitted Surv response.
+  cens <- Surv(time, cens)[, "status"]
+
   if (!is.null(x$call$censor_time)) {
 
     censor_time <-  transmute_(df, x$call$censor_time) %>%
