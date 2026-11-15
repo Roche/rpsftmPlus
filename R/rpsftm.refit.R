@@ -38,21 +38,25 @@ rpsftm.refit <- function(x, k){
     mutate(.arm  = rnd$arm, .rx = rnd$rx) %>%
     mutate(wt = ifelse(.arm == 1, 1, k))
 
+  if (!is.call(x$call$formula) ||
+      !identical(x$call$formula[[1L]], as.name("~"))) {
+    stop("Refitting requires a formula supplied directly in the original call.")
+  }
   frm <- as.formula(x$call$formula)
 
   psi.tried <- x$eval_z$psi
   
-  recens<-NULL
-  #If the original fit was with recensoring then recensor here too:
-  if (is.null(x$call$censor_time)==FALSE) {recens=df[, as.character(x$call$censor_time)]}
-  
-  rc <- rpsftm(frm, 
-               data = df, 
-               treat_modifier = wt, 
-               low_psi = min(psi.tried), 
-               hi_psi = max(psi.tried), 
-               n_eval_z = length(psi.tried), 
-               censor_time=recens)
+  # Retain the original test, confidence level, recensoring policy and ... .
+  refit.call <- x$call
+  refit.call[[1L]] <- quote(rpsftm::rpsftm)
+  refit.call$formula <- frm
+  refit.call$data <- quote(df)
+  refit.call$treat_modifier <- quote(wt)
+  refit.call$low_psi <- min(psi.tried)
+  refit.call$hi_psi <- max(psi.tried)
+  refit.call$n_eval_z <- length(psi.tried)
+  rc <- eval(refit.call, envir = list(df = df),
+             enclos = environment(x$formula))
 
 
   rc$call <- x$call
